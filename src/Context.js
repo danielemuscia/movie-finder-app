@@ -47,7 +47,6 @@ class ContextProvider extends React.Component {
         },
       })
       let newMovies = response.data.results;
-      console.log(newMovies);
       return newMovies
   }
   getMovies = async (
@@ -77,7 +76,6 @@ class ContextProvider extends React.Component {
       this.setState(() => ({ movies: newFilteredMovies }));
         this.setState({ page: 2 });
         window.scrollTo(0,0)
-        console.log('filter call')
         break
       case "nextPage":
         this.setNextPage()
@@ -91,7 +89,6 @@ class ContextProvider extends React.Component {
             page,
             sort)
         this.setState(({ movies }) => ({ movies: movies.concat(newPageMovies) }));
-        console.log('nextpage call')
         break
       default:
         return console.log('specify search type')
@@ -113,7 +110,6 @@ class ContextProvider extends React.Component {
           })
           let foundMovies = response.data.results;
           this.setState(() => ({ foundMovies }));
-          console.log(foundMovies)
         } else {
           this.setState(() => ({ foundMovies: [] }));
         }
@@ -127,7 +123,6 @@ class ContextProvider extends React.Component {
     try {
       let response = await axios.get(url)
       let movieInfo = response.data
-      console.log(movieInfo)
       this.setState(() => ({movieInfo}))
     } catch (error) {
       this.setState(() => ({movieInfo: {}}))

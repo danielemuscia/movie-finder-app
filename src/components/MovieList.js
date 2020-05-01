@@ -25,7 +25,6 @@ export default function MovieList(props) {
     );
   }, []);
   const handleNextPage = () => {
-    console.log(genres);
     return getMovies(
       "nextPage",
       "/discover/movie",

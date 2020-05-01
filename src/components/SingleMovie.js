@@ -42,7 +42,6 @@ export default function SingleMovie(props) {
     try {
       let response = await axios.get(url);
       let movieInfo = response.data;
-      console.log(movieInfo);
       setMovieInfo(movieInfo);
 
     } catch (error) {}
@@ -54,7 +53,6 @@ export default function SingleMovie(props) {
     try {
       let response = await axios.get(url);
       let castInfo = response.data;
-      console.log(castInfo);
       setCastInfo(castInfo);
 
     } catch (error) {}
