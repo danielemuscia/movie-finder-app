@@ -87,9 +87,9 @@ export default function SingleMovie(props) {
                 <Typography variant="h2">{movieInfo.title}</Typography>
                 <Typography variant="subtitle2">
                   {!loading &&
-                    `${movieInfo.release_date} &bull ${movieInfo.genres.map(
+                    `${movieInfo.release_date} - ${movieInfo.genres.map(
                       (item) => item.name
-                    )} &bull ${movieInfo.runtime} minuti`}
+                    )} - ${movieInfo.runtime} minuti`}
                 </Typography>
                 <Rating
                     name="rate"
